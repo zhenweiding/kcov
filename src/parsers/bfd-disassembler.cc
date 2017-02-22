@@ -53,6 +53,11 @@ const std::set<std::string> x86BranchInstructions =
 		"jczx"
 		"jezx"
 
+<<<<<<< HEAD
+=======
+		"loop",
+
+>>>>>>> b4dce77ea553c19b0b9898f460c40a8960b9571a
 		"jmp",
 
 		"call",
@@ -267,7 +272,12 @@ private:
 		std::set<std::string>::const_iterator it = x86BranchInstructions.find(vec[0]);
 
 		// Address?
+<<<<<<< HEAD
 		if (vec.size() >= 2 && string_is_integer(vec[1])) {
+=======
+		if (it != x86BranchInstructions.end() &&
+				vec.size() >= 2 && string_is_integer(vec[1])) {
+>>>>>>> b4dce77ea553c19b0b9898f460c40a8960b9571a
 			int64_t offset = string_to_integer(vec[1]);
 
 			// FIXME! Check if this is correct
